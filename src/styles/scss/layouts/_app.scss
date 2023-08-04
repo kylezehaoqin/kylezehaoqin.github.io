@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.App {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.hero-container {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	@include mq(medium) {
+		font-size: var(--fs-400); // This will apply an even larger font size at the 'medium' breakpoint
+	}
+
+	@include mq(small) {
+		font-size: var(--fs-500); // This will apply a larger font size at the 'small' breakpoint
+	}
+	padding-top: 200px;
+	padding-bottom: 200px;
+	display: grid;
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: center;
+    justify-items: center;
+}
+
+.nav-section {
+	width: 0;
+	height: 100%;
+}
+
+.main-section {
+	width: 0;
+	height: 100%;
+	background-color: black;
+}

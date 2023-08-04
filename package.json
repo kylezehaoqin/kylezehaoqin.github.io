@@ -5,22 +5,25 @@
   "type": "module",
   "homepage": "https://kylezehaoqin.github.io",
   "scripts": {
-    "dev": "vite",
-    "build": "rimraf dist && tsc && vite build",
+    "dev": "pnpm run sass && vite",
+    "build": "rimraf dist && pnpm run sass && tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "sass": "rimraf src/styles/css && sass src/styles/scss:src/styles/css"
   },
   "dependencies": {
     "d3": "^7.8.4",
-    "gh-pages": "^5.0.0",
+    "framer-motion": "^10.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rimraf": "^5.0.0",
-    "three": "^0.152.2"
+    "react-router": "^6.14.2",
+    "react-spring": "^9.7.2",
+    "sass": "^1.63.2"
   },
   "devDependencies": {
+    "@types/d3": "^7.4.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
@@ -29,7 +32,8 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
-    "tailwindcss": "^3.3.2",
+    "gh-pages": "^5.0.0",
+    "rimraf": "^5.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"
   },

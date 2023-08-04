@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+:root {
+    --section-spacing: 3.5rem;
+
+    @include mq(medium) {
+        --section-spacing: 7rem;
+    }
+
+    @each $color, $shades in $colors {
+        @each $prop, $value in $shades {
+            --clr-#{$color}-#{$prop}: #{$value};
+        }
+    }
+
+    // @each $screen-size, $property in $type-scale {
+    //     @if $screen-size == small {
+    //         @each $prop, $value in $property {
+    //             --fs-#{$prop}: #{$value};
+    //         }
+    //     }
+
+    //     @else {
+    //         @include mq(small) {
+    //             @each $prop, $value in $property {
+    //                 --fs-#{$prop}: #{$value};
+    //             }
+    //         }
+    //     }
+    // }
+
+    @each $screen-size, $property in $type-scale {
+        @if $screen-size == small {
+            @each $prop, $value in $property {
+                --fs-#{$prop}: #{$value};
+            }
+        } @else if $screen-size == medium {
+            @include mq(small) {
+                @each $prop, $value in $property {
+                    --fs-#{$prop}: #{$value};
+                }
+            }
+        } @else {
+            @include mq(medium) {
+                @each $prop, $value in $property {
+                    --fs-#{$prop}: #{$value};
+                }
+            }
+        }
+    }
+}

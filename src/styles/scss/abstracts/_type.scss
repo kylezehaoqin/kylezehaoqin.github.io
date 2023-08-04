@@ -1,0 +1,26 @@
+$type-scale: (
+  small: ( // Minor third
+    300: 1rem,
+    400: 1.125rem,
+    500: 1.563rem,
+    600: 1.953rem,
+    700: 2.441rem,
+    800: 3.052rem,
+  ),
+  medium: ( // Perfect fourth
+    300: 1rem,
+    400: 1.333rem,
+    500: 1.777rem,
+    600: 2.370rem,
+    700: 3.157rem,
+    800: 4.209rem,
+  ),
+  big: ( // Augmented fourth
+    300: 1rem,
+    400: 1.25rem,
+    500: 2rem,
+    600: 2.827rem,
+    700: 4rem,
+    800: 5.653rem,
+  ),
+);
