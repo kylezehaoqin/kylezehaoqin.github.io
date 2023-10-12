@@ -1,12 +1,34 @@
 .hero {
-  // position: absolute'
   display: flex;
   align-items: center;
   flex-direction: column;
-  // transition: opacity 2s cubic-bezier(0.2, 0.4, 0.75, 1);
-
+  top: 50;
   & img {
     width: 10rem;
   }
 }
 
+#scrollBtn {
+  // Initial state: Animated up and down movement
+  animation: moveUpDown 0.5s infinite alternate;
+  transition: transform 0.3s ease-out, scale 0.3s ease-out; // smooth transitions for the transformations
+
+  &:hover {
+    animation: none; // Stop the up and down movement on hover
+    transform: scale(1.3); // Scale up by 10% on hover
+  }
+
+  &:active {
+    transform: translateY(5px) scale(1.1); // move down by 5px and maintain enlarged size
+  }
+}
+
+// Keyframes for up and down movement
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}

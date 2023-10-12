@@ -1,5 +1,14 @@
 @use "../abstracts" as *;
 
+body {
+
+	background-image: linear-gradient(120deg,
+			hsla(0, 0%, 10%, 0.818),
+			hsla(0, 0%, 8%, 0.818),
+			hsla(0, 0%, 0%, 0.843),
+			hsla(240, 14%, 10%, 0.866));
+}
+
 .App {
 	display: flex;
 	flex-direction: row;
@@ -11,6 +20,7 @@
 	width: 100%;
 	position: absolute;
 	z-index: 1;
+
 	@include mq(medium) {
 		font-size: var(--fs-400); // This will apply an even larger font size at the 'medium' breakpoint
 	}
@@ -18,22 +28,30 @@
 	@include mq(small) {
 		font-size: var(--fs-500); // This will apply a larger font size at the 'small' breakpoint
 	}
+
 	padding-top: 200px;
 	padding-bottom: 200px;
 	display: grid;
-    justify-content: space-around;
-    align-content: space-between;
-    align-items: center;
-    justify-items: center;
+	justify-content: space-around;
+	align-content: space-between;
+	align-items: center;
+	justify-items: center;
 }
 
 .nav-section {
-	width: 0;
-	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: sticky;
+	border-width: 2px;
+	border-color: white;
+	border-style: solid;
+  background-color: rgba(0, 0, 0, 0.402);
 }
 
 .main-section {
-	width: 0;
-	height: 100%;
-	background-color: black;
+	padding: 2em;
+	text-align: center;
+
 }

@@ -5,24 +5,9 @@
 // 		"wdth" var(--font-width, 80);
 // }
 
-body {
-	font-family: "Heebo", sans-serif;
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	letter-spacing: -0.5px;
-	background-image: 
-    // linear-gradient( 
-    //   120deg, 
-    //   hsla(0, 0%, 10%, 0.893),
-		// 	hsla(273, 47%, 18%, 0.7), 
-    //   hsla(272, 43%, 31, 0.9),
-    //   hsla(243, 48%, 33%, 0.9)
-    // );
-		linear-gradient(
-			120deg, 
-			hsl(0deg 0% 10% / 93%), 
-			hsl(273deg 23.62% 29.5% / 80%), 
-			hsl(272deg 43% 31% / 69%), 
-			hsl(243deg 40.25% 46.29% / 90%)
-		)
 }
 
 h1,
@@ -34,12 +19,17 @@ h4 {
 	font-weight: normal;
 	font-stretch: 100%;
 	line-height: 1.1;
-	color: var(--clr-neutral-200);
+	color: var(--clr-neutral-300);
+}
+
+svg,
+.svg {
+	stroke: var(--clr-neutral-300);
 }
 
 h1 {
 	--font-weight: 900;
-	color: var(--clr, var(--clr-neutral-400));
+	color: var(--clr, var(--clr-neutral-100));
 }
 
 // This is setting the font-sizes
@@ -80,11 +70,11 @@ strong {
 
 a {
 	color: var(--clr-neutral-400);
+	text-decoration: none;
 
 	&:hover,
 	&:focus {
-		color: var(--clr-neutral-500);
-		text-decoration: none;
+		color: var(--clr-neutral-300);
 	}
 }
 
