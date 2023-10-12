@@ -19,12 +19,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.14.2",
+    "react-router-dom": "^6.15.0",
     "react-spring": "^9.7.2",
-    "sass": "^1.63.2"
+    "sass": "^1.63.2",
+    "simplex-noise": "^4.0.1"
   },
   "devDependencies": {
     "@types/d3": "^7.4.0",
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.2.0",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
