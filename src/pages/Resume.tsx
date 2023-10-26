@@ -37,6 +37,19 @@ export function Resume() {
     window.open('/Kyle_Qin_Resume.pdf')
   }
 
+
+  const handleNextPage = () => {
+    if (numPages && pageNumber < numPages) {
+      setPageNumber(prevPage => prevPage + 1);
+    }
+  }
+
+  const handlePreviousPage = () => {
+    if (pageNumber > 1) {
+      setPageNumber(prevPage => prevPage - 1);
+    }
+  }
+
   function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
     setNumPages(numPages);
   }
@@ -85,6 +98,16 @@ export function Resume() {
             className="pdf-page"
           />
         </Document>
+        {/* Pagination Controls */}
+      <div className="pagination-control">
+        <button onClick={handlePreviousPage} disabled={pageNumber === 1}>
+          Previous
+        </button>
+        <span>{pageNumber} / {numPages}</span>
+        <button onClick={handleNextPage} disabled={pageNumber === numPages}>
+          Next
+        </button>
+      </div>
       </div>
     </Suspense>
   )
