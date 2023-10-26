@@ -1,0 +1,322 @@
+{
+  "nodes": [
+    {
+      "id": 14,
+      "img": "/skill_img/center.png",
+      "size": 90
+    
+    },
+    { 
+      "id": 23,
+      "img": "/skill_img/backend.png",
+      "size": 40 
+    
+    },
+
+      { 
+        "id": 1,
+        "img": "/skill_img/java-logo.png",
+        "size": 50 
+      },
+      { 
+        "id": 2,
+        "img": "/skill_img/python-logo.png",
+        "size": 40 
+      
+      },
+        { 
+          "id": 6,
+          "img": "/skill_img/flask-logo.png",
+          "size": 40 
+        
+        },
+        { 
+          "id": 11,
+          "img": "/skill_img/fastapi-logo.png",
+          "size": 40 
+        
+        },
+        { 
+          "id": 20,
+          "img": "/skill_img/pytorch-logo.png",
+          "size": 40 
+        
+        },
+      { 
+        "id": 3,
+        "img": "/skill_img/cpp-logo.png",
+        "size": 40 
+      
+      },
+      { 
+        "id": 13,
+        "img": "/skill_img/database-icon.png",
+        "size": 40 
+      
+      },
+        { 
+          "id": 7,
+          "img": "/skill_img/mongodb-logo.png",
+          "size": 40 
+        
+        },
+        { 
+          "id": 8,
+          "img": "/skill_img/postgresql-logo.png",
+          "size": 40 
+        
+        },
+        { 
+          "id": 9,
+          "img": "/skill_img/neo4j-logo.png",
+          "size": 40 
+        
+        },
+    { 
+      "id": 15,
+      "img": "/skill_img/frontend.png",
+      "size": 60 
+    
+    },
+      { 
+        "id": 16,
+        "img": "/skill_img/css-logo.png",
+        "size": 40 
+      
+      },
+      { 
+        "id": 5,
+        "img": "/skill_img/javascript-logo.png",
+        "size": 40 
+      
+      },
+        { 
+          "id": 22,
+          "img": "/skill_img/vue-logo.png",
+          "size": 40 
+        
+        },
+        { 
+          "id": 4,
+          "img": "/skill_img/react-logo.png",
+          "size": 40 
+        
+        },
+        { 
+          "id": 12,
+            "img": "/skill_img/typescript-logo.png",
+            "size": 40 
+        
+          },
+    { 
+      "id": 24,
+      "img": "/skill_img/devops.png",
+      "size": 40 
+    
+    },
+      { 
+        "id": 17,
+        "img": "/skill_img/docker-logo.png",
+        "size": 40 
+      
+      },
+      { 
+        "id": 18,
+        "img": "/skill_img/nginx-logo.png",
+        "size": 40 
+      
+      },
+      { 
+        "id": 19,
+        "img": "/skill_img/postman-logo.png",
+        "size": 40 
+      
+      },
+      { 
+        "id": 21,
+        "img": "/skill_img/redis-logo.png",
+        "size": 40 
+      
+      },
+    {
+      "id": 25,
+      "img": "/skill_img/machine-learning.png",
+      "size": 40
+    
+    },
+    {
+      "id": 26,
+      "img": "/skill_img/numpy-logo.png",
+      "size": 40
+    
+    },
+    {
+      "id": 27,
+      "img": "/skill_img/opencv-logo.png",
+      "size": 40
+    
+    },
+    {
+      "id": 28,
+      "img": "/skill_img/graphql-logo.png",
+      "size": 40
+    
+    },
+    { 
+      "id": 29,
+      "img": "/skill_img/angular-logo.png",
+      "size": 40
+    }
+  ],
+  "links": [
+    
+    { 
+      "source": 14, 
+      "target": 23 
+    },
+      
+      { 
+        "source": 23, 
+        "target": 1
+      },
+      
+      { 
+        "source": 23, 
+        "target": 2
+      },
+        { 
+          "source": 2, 
+          "target": 6
+        },
+        { 
+          "source": 2, 
+          "target": 11
+        },
+        { 
+          "source": 2, 
+          "target": 20
+        },
+
+      
+      { 
+        "source": 23, 
+        "target": 3
+      },
+      
+        { 
+          "source": 28, 
+          "target":23
+        },
+        { 
+          "source": 28, 
+          "target": 15
+        },
+        { 
+          "source": 28, 
+          "target": 13
+        },
+
+      
+      { 
+        "source": 14, 
+        "target": 13
+      },
+        { 
+          "source": 13, 
+          "target": 7
+        },
+        { 
+          "source": 13, 
+          "target": 8
+        },
+        { 
+          "source": 13, 
+          "target": 9
+        },
+
+    
+    { 
+      "source": 14, 
+      "target": 15 
+    },
+      
+      { 
+        "source": 15, 
+        "target": 16 
+      },
+      { 
+        "source": 15, 
+        "target": 5 
+      },
+      { 
+        "source": 15, 
+        "target": 22 
+      },
+      { 
+        "source": 15, 
+        "target": 4
+      },
+      { 
+        "source": 15, 
+        "target": 12 
+      },
+      { 
+        "source": 15, 
+        "target": 29
+      },
+
+    
+    { 
+      "source": 14, 
+      "target": 24 
+    },
+      { 
+        "source": 24, 
+        "target": 17 
+      },
+      { 
+        "source": 24, 
+        "target": 18 
+      },
+      { 
+        "source": 24, 
+        "target": 19 
+      },
+      { 
+        "source": 24, 
+        "target": 21 
+      },
+
+    
+    { 
+      "source": 14, 
+      "target": 25 
+    },
+        { 
+          "source": 25, 
+          "target": 20
+        },
+          {
+            "source": 20, 
+            "target": 2
+          },
+        { 
+          "source": 25, 
+          "target": 26
+        },
+          {
+            "source": 26, 
+            "target": 2
+          },
+        { 
+          "source": 25, 
+          "target": 27
+        },
+          {
+            "source": 27, 
+            "target": 2
+          }
+
+    
+  ]
+}
