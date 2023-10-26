@@ -133,4 +133,11 @@ dist
 
 
 # compiled css
-src/styles/css
+/src/styles/css
+/public/*.png
+/public/*.svg
+/public/*.pdf
+/public/*.webp
+/public/**/*.png
+/public/**/*.svg
+
