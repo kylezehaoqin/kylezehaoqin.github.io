@@ -88,7 +88,7 @@ export function Resume() {
         </span>
         <Document
           className="pdf-container"
-          file="Kyle_Qin_Resume.pdf"
+          file="/resume.pdf"
           onLoadSuccess={onDocumentLoadSuccess}
         >
           <Page

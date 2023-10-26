@@ -75,7 +75,7 @@ export function About() {
                   Software Developer
                 </div>
                 <span className="range">
-                  2020 - 2022
+                  2020 - 2021
                 </span>
                 <a href="https://rcos.io/"> @ Rensselaer Center of Open Source</a>
               </header>

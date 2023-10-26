@@ -106,10 +106,12 @@ export default function ToolBox() {
       .force("link",
         d3.forceLink(dataset.links)
           .distance(100)
+          .strength(0.6)
           .id((d) => (d as NodeData).id)
       )
       .force("center", d3.forceCenter(dimensions.width / 2, dimensions.height / 2.3))
       .force("charge", d3.forceManyBody().strength(-100))
+      // .force("charge", d3.forceRadial(10, dimensions.width / 2, dimensions.height / 2))
       // .force("x", d3.forceX(dimensions.width / 2).strength(-0.5))
       // .force("y", d3.forceY(dimensions.height / 2).strength(-0.5))
 

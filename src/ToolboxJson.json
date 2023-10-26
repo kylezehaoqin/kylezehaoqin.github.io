@@ -27,25 +27,25 @@
         { 
           "id": 6,
           "img": "/skill_img/flask-logo.png",
-          "size": 40 
+          "size": 30 
         
         },
         { 
           "id": 11,
           "img": "/skill_img/fastapi-logo.png",
-          "size": 40 
+          "size": 30 
         
         },
         { 
           "id": 20,
           "img": "/skill_img/pytorch-logo.png",
-          "size": 40 
+          "size": 30 
         
         },
       { 
         "id": 3,
         "img": "/skill_img/cpp-logo.png",
-        "size": 40 
+        "size": 30 
       
       },
       { 
@@ -57,19 +57,19 @@
         { 
           "id": 7,
           "img": "/skill_img/mongodb-logo.png",
-          "size": 40 
+          "size": 30 
         
         },
         { 
           "id": 8,
           "img": "/skill_img/postgresql-logo.png",
-          "size": 40 
+          "size": 30 
         
         },
         { 
           "id": 9,
           "img": "/skill_img/neo4j-logo.png",
-          "size": 40 
+          "size": 30 
         
         },
     { 
@@ -81,31 +81,31 @@
       { 
         "id": 16,
         "img": "/skill_img/css-logo.png",
-        "size": 40 
+        "size": 30 
       
       },
       { 
         "id": 5,
         "img": "/skill_img/javascript-logo.png",
-        "size": 40 
+        "size": 30 
       
       },
         { 
           "id": 22,
           "img": "/skill_img/vue-logo.png",
-          "size": 40 
+          "size": 30 
         
         },
         { 
           "id": 4,
           "img": "/skill_img/react-logo.png",
-          "size": 40 
+          "size": 30 
         
         },
         { 
           "id": 12,
             "img": "/skill_img/typescript-logo.png",
-            "size": 40 
+            "size": 30 
         
           },
     { 
@@ -117,25 +117,25 @@
       { 
         "id": 17,
         "img": "/skill_img/docker-logo.png",
-        "size": 40 
+        "size": 30 
       
       },
       { 
         "id": 18,
         "img": "/skill_img/nginx-logo.png",
-        "size": 40 
+        "size": 30 
       
       },
       { 
         "id": 19,
         "img": "/skill_img/postman-logo.png",
-        "size": 40 
+        "size": 30 
       
       },
       { 
         "id": 21,
         "img": "/skill_img/redis-logo.png",
-        "size": 40 
+        "size": 30 
       
       },
     {
@@ -147,7 +147,7 @@
     {
       "id": 26,
       "img": "/skill_img/numpy-logo.png",
-      "size": 40
+      "size": 30
     
     },
     {

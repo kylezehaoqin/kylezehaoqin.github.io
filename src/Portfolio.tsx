@@ -6,7 +6,7 @@ import { Resume } from './pages/Resume';
 import NetworkGraph from './components/NetworkGraphBG';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const App: React.FC = () => {
+const Portfolio: React.FC = () => {
   const [showMain, setShowMain] = useState<boolean>(false);
   
   const handleScroll = (e: React.WheelEvent<HTMLDivElement>) => {
@@ -51,4 +51,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Portfolio;
