@@ -1,74 +1,51 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Hero } from './components/Hero';
 import { Nav } from './components/Nav';
 import { About } from './pages/About';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Resume } from './pages/Resume';
 import NetworkGraph from './components/NetworkGraphBG';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Separate component for readability
-const ReadingContent = () => <div>Reading Content</div>;
-
-const App = () => {
-  const [showMain, setShowMain] = useState(false);
-
-  // Animation variants
-  const variants = {
-    hero: { open: { y: '0%' }, closed: { y: '-100%' } },
-    nav: { open: { width: '15%', x: '0%' }, closed: { width: '0%', x: '-100%' } },
-    main: { open: { width: '85%', x: '0%' }, closed: { width: '0%', x: '100%' } }
-  };
-
-  // Animation transition
-  const transition = { duration: 0.5 };
-
-  const handleScroll = (e: React.WheelEvent) => {
-    e.preventDefault;
-    // console.log(e.deltaY)
+const App: React.FC = () => {
+  const [showMain, setShowMain] = useState<boolean>(false);
+  
+  const handleScroll = (e: React.WheelEvent<HTMLDivElement>) => {
     if (e.deltaY > 10) {
       setShowMain(true);
     }
   };
 
-  return (
-    <div style={{ position: 'relative' }}>
 
+  return (
+    
+    <div className="App">
+      <div 
+        className={`hero-container ${showMain ? 'closed' : 'open'}`}
+        onWheel={handleScroll}
+      >
+        <Hero />
+        <button id="scrollBtn" onClick={() => {
+          setShowMain(true);
+        }}>
+          {/* <img src={DownChevron} alt='chevron-down' className='svg'/> */}
+          <svg width="30px" height="30px" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.293 6.293a1 1 0 0 1 1.414 0L12 11.586l5.293-5.293a1 1 0 1 1 1.414 1.414l-6 6a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 0-1.414zm0 6a1 1 0 0 1 1.414 0L12 17.586l5.293-5.293a1 1 0 0 1 1.414 1.414l-6 6a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 0-1.414z" fill="#fff"/></svg>
+        </button>
+      </div>
       <NetworkGraph />
       <Router>
-        <div className="App" onWheel={handleScroll} style={{ top: 0, left: 0, right: 0, bottom: 0 }}>
-          <motion.div 
-            className="hero-container"
-            animate={showMain ? 'closed' : 'open'}
-            variants={variants.hero}
-            transition={transition}
-            style={{ height: '100%' }}
-          >
-            <Hero showMain={showMain} handleShowMain={() => setShowMain(true)} />
-          </motion.div>
-
-          <motion.nav
-            className="nav-section text-neutral-300"
-            animate={showMain ? 'open' : 'closed'}
-            variants={variants.nav}
-            transition={transition}
-          >
+          <header className={`nav-section ${showMain ? 'open' : 'closed'}`}>
             {showMain && <Nav />}
-          </motion.nav>
+          </header>
           
-          <motion.main
-            className="main-section text-neutral-200"
-            animate={showMain ? 'open' : 'closed'}
-            variants={variants.main}
-            transition={transition}
-          >
+          <main className={`main-section text-neutral-200 ${showMain ? 'open' : 'closed'}`}>
             {showMain && (
               <Routes>
                 <Route index element={<About />} />
-                <Route path="/reads" element={<ReadingContent />} />
+                <Route path='/resume' element={<Resume />} />
               </Routes>
             )}
-          </motion.main>
-        </div>
+          </main>
+
       </Router>
     </div>
   );

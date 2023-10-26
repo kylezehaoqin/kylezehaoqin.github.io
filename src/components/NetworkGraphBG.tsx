@@ -21,28 +21,19 @@ type Link = d3.SimulationLinkDatum<Node> & {
 
 const NetworkGraph: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const {width, height} = useWindowSize();
-  // console.log(width, height)
+  const { width, height } = useWindowSize();
 
   useEffect(() => {
     if (!svgRef.current) return;
-
+    
     const svg = d3.select(svgRef.current);
-    // const width = window.innerWidth;
-    // const height = window.innerHeight;
     svg.attr("width", width).attr("height", height);
 
     const nodes: Node[] = Array.from({ length: 80 }, (_, index) => ({ id: index, size: 5 }));
-    const links: Link[] = Array.from({ length: nodes.length - 1 }, (_, index) => ({
+    const links: Link[] = Array.from({ length: nodes.length - 30 }, (_, index) => ({
       source: index,
       target: Math.floor(Math.random() * (nodes.length - index)) + index,
     }));
-
-    function handlePointerMove(event: MouseEvent) {
-      const [x, y] = d3.pointer(event);
-      nodes[0].fx = x - width / 2;
-      nodes[0].fy = y - height / 2;
-    }
 
     function ticked() {
       // Update link positions
@@ -74,6 +65,13 @@ const NetworkGraph: React.FC = () => {
       d.fy = null;
     }
 
+
+    
+    const drag = d3.drag<SVGCircleElement, Node>()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended);
+
     const simulation = d3.forceSimulation<Node>(nodes)
       .force("center", d3.forceCenter(width / 2, height / 2))
       .force('charge', d3.forceManyBody().strength(-60))
@@ -89,6 +87,7 @@ const NetworkGraph: React.FC = () => {
       .on('tick', ticked);
 
     
+    // timer function to keep animation looping
     let t = 0;
     d3.timer((elapsed) => {
       t = elapsed * 0.001; // update time variable
@@ -101,7 +100,7 @@ const NetworkGraph: React.FC = () => {
       const cy = height / 2;
       // Rotate nodes
       // Use elapsed time to create a smooth rotation
-      const angle = .001; 
+      const angle = 0.001; 
       nodes.forEach((d) => {
         const dx = d.x || 0 - cx;
         const dy = d.y || 0 - cy;
@@ -116,18 +115,13 @@ const NetworkGraph: React.FC = () => {
     });
 
 
-    
-    const drag = d3.drag<SVGCircleElement, Node>()
-      .on("start", dragstarted)
-      .on("drag", dragged)
-      .on("end", dragended);
-
     // Create link elements
     svg.selectAll("line")
       .data(links)
       .enter()
       .append("line")
-      .style("stroke", "#000");
+      .style("stroke", "#000")
+      .style("stroke-width", 1);
 
     // create node elements
     svg.selectAll("circle")
@@ -135,12 +129,11 @@ const NetworkGraph: React.FC = () => {
       .enter()
       .append("circle")
       .attr("r", (d: d3.SimulationNodeDatum) => (d as Node).size)
-      // .on("touchmove", event => event.preventDefault())
-      // .on("pointermove", pointermoved)
-      .on("mouseover", function(event: MouseEvent, d) {
+      .on("touchmove", event => event.preventDefault())
+      .on("mouseover", function(d) {
         d3.select(this).attr("r", d.size * 2);  // Double the size on mouseover
       })
-      .on("mouseout", function(event: MouseEvent, d) {
+      .on("mouseout", function(d) {
           d3.select(this).attr("r", d.size);  // Revert to original size on mouseout
       })
       .style("fill", "#fff")
@@ -154,9 +147,8 @@ const NetworkGraph: React.FC = () => {
   return (
     <svg 
       ref={svgRef} 
-      style={{ top: 0, left: 0, position: 'absolute'}} 
-      // width={window.innerWidth} 
-      // height={window.innerHeight}
+      style={{ top: 0, left: 0, position: 'absolute'}}
+      className='background-svg'
     />
   );
 };
