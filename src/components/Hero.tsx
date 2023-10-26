@@ -1,9 +1,6 @@
 import { useSpring, animated } from 'react-spring'
-// import DownChevron from '/svg/chevrons-down.svg'
-
 
 export const Hero = () => {
-
   const appear = useSpring(
     {
       from: { opacity: 0 },
@@ -11,8 +8,6 @@ export const Hero = () => {
       config: { duration: 2500 }
     }
   );
-
-
 
   return (
     <>
