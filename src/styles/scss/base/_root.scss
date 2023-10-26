@@ -1,51 +1,37 @@
 @use "../abstracts" as *;
 
 :root {
-    --section-spacing: 3.5rem;
-
-    @include mq(medium) {
-        --section-spacing: 7rem;
+    // spacing scale
+    
+    @each $screen-size, $spacing in $spacing-scale {
+        @if $screen-size == small {
+            --section-spacing: $spacing;
+        } @else {
+            @include aboveScreen($screen-size) {
+                --section-spacing: $spacing;
+            }
+        }
     }
 
+    // color scale
     @each $color, $shades in $colors {
         @each $prop, $value in $shades {
             --clr-#{$color}-#{$prop}: #{$value};
         }
     }
 
-    // @each $screen-size, $property in $type-scale {
-    //     @if $screen-size == small {
-    //         @each $prop, $value in $property {
-    //             --fs-#{$prop}: #{$value};
-    //         }
-    //     }
-
-    //     @else {
-    //         @include mq(small) {
-    //             @each $prop, $value in $property {
-    //                 --fs-#{$prop}: #{$value};
-    //             }
-    //         }
-    //     }
-    // }
-
+    // Iterate over each screen size and set font sizes
     @each $screen-size, $property in $type-scale {
         @if $screen-size == small {
-            @each $prop, $value in $property {
-                --fs-#{$prop}: #{$value};
-            }
-        } @else if $screen-size == medium {
-            @include mq(small) {
-                @each $prop, $value in $property {
-                    --fs-#{$prop}: #{$value};
-                }
-            }
+        @each $prop, $value in $property {
+            --fs-#{$prop}: #{$value};
+        }
         } @else {
-            @include mq(medium) {
-                @each $prop, $value in $property {
-                    --fs-#{$prop}: #{$value};
-                }
+        @include aboveScreen($screen-size) {
+            @each $prop, $value in $property {
+            --fs-#{$prop}: #{$value};
             }
+        }
         }
     }
 }

@@ -15,7 +15,7 @@ $type-scale: (
     700: 3.157rem,
     800: 4.209rem,
   ),
-  big: ( // Augmented fourth
+  large: ( // Augmented fourth
     300: 1rem,
     400: 1.25rem,
     500: 2rem,
@@ -24,3 +24,10 @@ $type-scale: (
     800: 5.653rem,
   ),
 );
+
+$spacing-scale: (
+  small: 3.5rem,
+  medium: 5rem,
+  large: 7rem
+);
+

@@ -1,9 +1,21 @@
 @use "breakpoints" as *;
 
-@mixin mq($key) {
+@mixin aboveScreen($key) {
   $size: map-get($breakpoints, $key);
 
   @media only screen and (min-width: $size) {
     @content;
+  }
+}
+
+@mixin belowScreen($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @if $breakpoint-value {
+    @media (max-width: ($breakpoint-value - 1px)) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for `#{$breakpoint}` in $breakpoints map.";
   }
 }
