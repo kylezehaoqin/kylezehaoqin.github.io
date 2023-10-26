@@ -1,0 +1,76 @@
+{
+
+    "cssaw": {
+        "projectDetail": {
+        "title": "CSSAW",
+        "github": "https: //github.com/CSSAW",
+        "timeRange": "06/2020 - 08/2020",
+        "techstack": [
+                "Python",
+                "SQL",
+                "Keras",
+                "GCP",
+                "Streamlit"
+            ],
+        "description": "A predictive modeling and visualization of water level in South Africa. Developed aggregation, cleansing, and visualization for land water equivalent thickness data from NASA's GRACE archive."
+        }
+    },
+    "yacs": {
+        "projectDetail": {
+        "title": "YACS",
+        "github": "https: //github.com/YACS-RCOS/yacs.n/tree/master",
+        "timeRange": "08/2020 -- 05/2021",
+        "techstack": [
+                "Vue3",
+                "SCSS",
+                "Flask",
+                "Nginx",
+                "Docker",
+                "PostgreSQL"
+            ],
+        "description": "A course scheduling and management system. Lead styling refactor ensuring UI responsiveness and consistency. Developed various frontend utility components and error handling pages. Optimized state management by reusage of cahced data."
+        }
+    },
+    "pokemonbattles": {
+        "projectDetail": {
+        "title": "Pokemon Battles",
+        "github": "https: //github.com/KSTVV-WebSci22/Pokemon-Battles",
+        "timeRange": "02/2022 -- 05/2022",
+        "techstack": [
+                "React",
+                "Express",
+                "Firebase"
+            ],
+        "description": "A pokemon online game that simulates Pokemon Showdown. Developed and tested \"easter egg\" shop API using stratified sampling under arbitrary random distribution, and the related frontend UI in React. Experimented battle state management using state machines to ensure functional component purity and development experience."
+        }
+    },
+    "flexswarm": {
+        "projectDetail": {
+        "title": "FlexSwarm",
+        "github": "https: //github.com/AI-and-Blockchain/F22_FlexSwarm",
+        "timeRange": "10/2022 -- 12/2022",
+        "techstack": [
+                "Python",
+                "React",
+                "Flask",
+                "Algorand"
+            ],
+        "description": "A decentralized ensemble model architecture and process that allows for flexible training. Developed an evaluation process that completes the workflow, implemented UI in React and relevant server side operations with Flask. Performed integration and unit testing."
+        }
+    },
+    "tie": {
+        "projectDetail": {
+        "title": "Tie",
+        "github": "https: //github.com/AI-and-Blockchain/F22_FlexSwarm",
+        "timeRange": "03/2023 -- 05/2023",
+        "techstack": [
+                "React",
+                "GraphQL",
+                "Neo4j",
+                "Docker",
+                "AWS Lambda, S3"
+            ],
+        "description": "Developed a knowledge graph based recommender to help streamline recruitment for client company. System evaluates project and candidate bidirectional matching using Neo4j and GraphQL on a Node server. Modeled skillset hierarchy for each entity with n-ary tree for link prediction. Implemented frontend UI with React. "
+        }
+    }
+}
