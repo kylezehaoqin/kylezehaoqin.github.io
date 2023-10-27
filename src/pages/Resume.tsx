@@ -34,7 +34,7 @@ export function Resume() {
   }
 
   const handleOpen = () => {
-    window.open('/Kyle_Qin_Resume.pdf')
+    window.open('/resume.pdf')
   }
 
 

@@ -18,6 +18,10 @@
 
   &.closed {
     transform: translateY(-100%);
+
+    & #scrollBtn {
+      display: none;
+    }
   }
 
   @include aboveScreen(small) {
@@ -54,7 +58,7 @@
 }
 
 #scrollBtn {
-  margin: 20vh auto;
+  margin: 10rem auto;
   animation: moveUpDown 0.5s infinite alternate;
   transition: transform 0.3s ease-out, scale 0.3s ease-out; // smooth transitions for the transformations
 
